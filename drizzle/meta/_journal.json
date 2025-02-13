@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1739426322014,
+      "tag": "0000_strange_centennial",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1739426598087,
+      "tag": "0001_legal_mephisto",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1739427417470,
+      "tag": "0002_thin_azazel",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1739427690460,
+      "tag": "0003_blue_charles_xavier",
+      "breakpoints": true
+    }
+  ]
+}

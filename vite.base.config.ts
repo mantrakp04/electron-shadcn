@@ -22,14 +22,17 @@ export function getBuildConfig(env: ConfigEnv<"build">): UserConfig {
     root,
     mode,
     build: {
-      // Prevent multiple builds from interfering with each other.
       emptyOutDir: false,
-      // 🚧 Multiple builds may conflict.
       outDir: ".vite/build",
       watch: command === "serve" ? {} : null,
       minify: command === "build",
     },
     clearScreen: false,
+    server: {
+      watch: {
+        ignored: ["**/data/**"],
+      },
+    },
   };
 }
 

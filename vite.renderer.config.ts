@@ -31,6 +31,11 @@ export default defineConfig((env) => {
         "@": path.resolve(__dirname, "./src"),
       },
     },
+    server: {
+      watch: {
+        ignored: ["**/data/**"],
+      },
+    },
     clearScreen: false,
   } as UserConfig;
 });

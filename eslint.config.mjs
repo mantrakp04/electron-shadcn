@@ -1,7 +1,7 @@
 import globals from "globals";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
-import pluginReact from "eslint-plugin-react";
+import pluginReact, { rules } from "eslint-plugin-react";
 import eslintPluginPrettierRecommended from "eslint-config-prettier";
 import reactCompiler from "eslint-plugin-react-compiler";
 import path from "node:path";
@@ -29,4 +29,9 @@ export default [
   pluginReact.configs.flat.recommended,
   eslintPluginPrettierRecommended,
   ...tseslint.configs.recommended,
+  {
+    rules: {
+      "@typescript-eslint/no-explicit-any": ["off"],
+    },
+  },
 ];

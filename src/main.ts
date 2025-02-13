@@ -7,6 +7,7 @@ import {
   installExtension,
   REACT_DEVELOPER_TOOLS,
 } from "electron-devtools-installer";
+import { runMigrations } from "./helpers/ipc/api/db/db";
 
 const inDevelopment = process.env.NODE_ENV === "development";
 
@@ -45,7 +46,7 @@ async function installExtensions() {
   }
 }
 
-app.whenReady().then(createWindow).then(installExtensions);
+app.whenReady().then(createWindow).then(installExtensions).then(runMigrations);
 
 //osX only
 app.on("window-all-closed", () => {
